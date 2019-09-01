@@ -5,7 +5,7 @@
  * @param {Array.<string>} anagramStrings
  * @returns {Array.<Array.<string>>}
  */
-const anagram = (anagramStrings) => {
+const anagram = anagramStrings => {
 	return anagramStrings
 		.reduce((accumulator, str) => {
 			return addToGroup(accumulator, str);
