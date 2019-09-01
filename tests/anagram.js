@@ -1,7 +1,7 @@
 'use strict';
 
 QUnit.module('Тестируем функцию anagram', function () {
-	QUnit.test('Функция работает правильно', function (assert) {
+	QUnit.test('Функция работает правильно', assert => {
 		const input = [
 			'кот', 'пила', 'барокко',
 			'стоп', 'ток', 'кошка',
@@ -18,21 +18,21 @@ QUnit.module('Тестируем функцию anagram', function () {
 		assert.deepEqual(anagram(input), output);
 	});
 
-	QUnit.test('Функция не выводит группы из менее двух слов', function (assert) {
+	QUnit.test('Функция не выводит группы из менее двух слов', assert => {
 		assert.deepEqual(anagram(['кот']), []);
 	});
 });
 
 
 QUnit.module('Тестируем функцию areAnagram', function () {
-	QUnit.test('Если входные значения - анаграммы, то возвращает true', function (assert) {
+	QUnit.test('Если входные значения - анаграммы, то возвращает true', assert => {
 		const first = 'барокко';
 		const second = 'коробка';
 
 		assert.strictEqual(areAnagram(first, second), true, `${first} ${second}`);
 	});
 
-	QUnit.test('Если подать на вход не анаграммы, то возвращает false', function (assert) {
+	QUnit.test('Если подать на вход не анаграммы, то возвращает false', assert => {
 		const first = 'барокко';
 		const second = 'кот';
 		const third = 'пила';
@@ -44,7 +44,7 @@ QUnit.module('Тестируем функцию areAnagram', function () {
 });
 
 QUnit.module('Тестируем функцию addToGroup', function () {
-	QUnit.test('Функция работает правильно. Группирует анаграммы без фильтрации и сортировки', function (assert) {
+	QUnit.test('Функция работает правильно. Группирует анаграммы без фильтрации и сортировки', assert => {
 		const input = [
 			'кот', 'пила', 'барокко',
 			'стоп', 'ток', 'кошка',
