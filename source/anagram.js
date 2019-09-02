@@ -2,8 +2,8 @@
 
 /**
  * Groups and sorts anagrams
- * @param {Array.<string>} inputArray
- * @returns {Array.<Array.<string>>}
+ * @param {string[]} inputArray
+ * @returns {string[][]}
  */
 const anagram = inputArray => {
 	let result = {};
