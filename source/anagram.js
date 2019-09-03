@@ -6,7 +6,7 @@
  * @returns {string[][]}
  */
 const anagram = inputArray => {
-	let result = {};
+	const result = {};
 
 	inputArray.forEach((elem) => {
 		const sortedElem = elem
@@ -21,12 +21,8 @@ const anagram = inputArray => {
 		result[sortedElem] = [elem];
 	});
 
-	result = Object.values(result);
-
-	result = result
+	return Object.values(result)
 		.filter(anagrams => anagrams.length > 1)
 		.map(anagrams => anagrams.sort())
 		.sort();
-
-	return result;
 };
